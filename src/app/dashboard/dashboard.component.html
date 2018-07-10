@@ -1,3 +1,9 @@
-<p>
-  {{ books | json }}
-</p>
+<!-- <p> -->
+<!-- <br-book [book]="book" *ngFor="let book of books"></br-book> -->
+<!-- </p> -->
+
+<ng-container *ngFor="let book of books; index as i; even as e">
+  <div [ngClass]="{ isEven: e }">
+    <br-book [book]="book"></br-book>
+  </div>
+</ng-container>

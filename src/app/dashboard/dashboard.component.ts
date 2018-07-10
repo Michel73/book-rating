@@ -17,7 +17,7 @@ export class DashboardComponent implements OnInit {
     this.books = [{
       title: 'Angular',
       isbn: '123',
-      rating: 5,
+      rating: 1,
       description: 'about Angular'
     },
     {
@@ -25,6 +25,12 @@ export class DashboardComponent implements OnInit {
       isbn: '1234',
       rating: 5,
       description: 'about AngularJS'
+    },
+    {
+      title: 'Star Wars',
+      isbn: '5678',
+      rating: 3,
+      description: 'Darth Vador is back'
     }];
   }
 
