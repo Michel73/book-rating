@@ -12,19 +12,18 @@ export class BookComponent implements OnInit {
 
   @Input() book: Book = {} as Book;
 
-  @Output() rated = new EventEmitter<Book>();
+  @Output() rated = new EventEmitter<Book>(true);
 
   constructor(private ratingService: BookRatingService) {
   }
 
   ngOnInit() {
-    this.rated = new EventEmitter<Book>();
   }
 
   rateUp() {
-    const book = this.ratingService.rateUp(this.book);
-    this.rated.emit(book);
-    this.book = book;
+    const ratedBook = this.ratingService.rateUp(this.book);
+    this.rated.emit(ratedBook);
+    this.book = ratedBook;
   }
 
   rateDown() {
