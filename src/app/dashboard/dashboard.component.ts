@@ -34,11 +34,13 @@ export class DashboardComponent implements OnInit {
     }];
   }
 
+  // #region
   reorderBooks(book: Book) {
     console.log('info ', book);
     this.books = this.books
       .map(tmpBook => tmpBook.isbn === book.isbn ? book : tmpBook)
       .sort((a, b) => b.rating - a.rating);
   }
+  // #endregion
 
 }
