@@ -21,14 +21,10 @@ export class BookComponent implements OnInit {
   }
 
   rateUp() {
-    const ratedBook = this.ratingService.rateUp(this.book);
-    this.rated.emit(ratedBook);
-    this.book = ratedBook;
+    this.rated.emit(this.ratingService.rateUp(this.book));
   }
 
   rateDown() {
-    const book = this.ratingService.rateDown(this.book);
-    this.rated.emit(book);
-    this.book = book;
+    this.rated.emit(this.ratingService.rateDown(this.book));
   }
 }
