@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "karma": "karma start --browsers Chrome,Chrome_without_security"
   },
   "private": true,
   "dependencies": {
