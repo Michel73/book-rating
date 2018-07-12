@@ -1,7 +1,7 @@
 <!-- <p> -->
 <!-- <br-book [book]="book" *ngFor="let book of books"></br-book> -->
 <!-- </p> -->
-
+<br-create-book></br-create-book>
 <ng-container *ngFor="let book of books; index as i; even as e">
   <div [ngClass]="{ isEven: e }">
     <br-book [book]="book" (rated)="reorderBooks($event)"></br-book>
