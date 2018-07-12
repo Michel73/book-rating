@@ -11,13 +11,27 @@ exports.config = {
   capabilities: {
     'browserName': 'chrome'
   },
+  // multiCapabilities: [
+  // {
+  // 'browserName': 'chrome',
+  // 'chromeOptions': {
+  // 'binary': '/usr/bin/chromium-browser',
+  // 'args': ['--disable-gpu']
+  // }
+  // },
+  // {
+  // browserName: 'firefox',
+  // marionette: true,
+  // acceptInsecureCerts: true
+  // }
+  // ],
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function() {}
+    print: function () { }
   },
   onPrepare() {
     require('ts-node').register({
