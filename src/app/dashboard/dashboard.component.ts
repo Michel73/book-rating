@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 import { Book } from '../shared/book';
 
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit {
 
@@ -40,6 +41,11 @@ export class DashboardComponent implements OnInit {
     this.books = this.books
       .map(tmpBook => tmpBook.isbn === book.isbn ? book : tmpBook)
       .sort((a, b) => b.rating - a.rating);
+  }
+
+  addBook(book: Book) {
+    // this.books.push(book);
+    this.books = [...this.books, book];
   }
   // #endregion
 
