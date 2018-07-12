@@ -11,5 +11,7 @@
     <button testRateUpButton class="btn btn-primary" (click)="rateUp()">Rate up</button>
 
     <button class="btn btn-success ml-2" (click)="rateDown()">Rate down</button>
+
+    <a [routerLink]="['/book', book.isbn]" class="btn btn-secondary ml-2">Details</a>
   </div>
 </div>
