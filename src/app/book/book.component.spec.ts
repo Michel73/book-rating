@@ -10,7 +10,6 @@ fdescribe('BookComponent', () => {
 
   const ratingMock = {
     rateUp: () => {
-      debugger
     }
   };
 
