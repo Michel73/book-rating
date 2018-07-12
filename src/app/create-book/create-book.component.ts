@@ -35,4 +35,19 @@ export class CreateBookComponent implements OnInit {
     });
     this.bookForm.reset();
   }
+
+  isInvalid(name: string) {
+    const control = this.bookForm.get(name);
+    return control.invalid && control.dirty;
+  }
+
+  hasError(name: string, rule: string) {
+    const control = this.bookForm.get(name);
+    return control.hasError(rule);
+  }
+
+  getError(name: string, rule: string) {
+    const control = this.bookForm.get(name);
+    return control.getError(rule);
+  }
 }

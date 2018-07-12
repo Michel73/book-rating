@@ -2,6 +2,8 @@
 <!-- <br-book [book]="book" *ngFor="let book of books"></br-book> -->
 <!-- </p> -->
 <br-create-book (createBook)="addBook($event)"></br-create-book>
+<hr> Anzahl Bücher: {{ books.length }}
+<hr>
 <ng-container *ngFor="let book of books; index as i; even as e">
   <div [ngClass]="{ isEven: e }">
     <br-book [book]="book" (rated)="reorderBooks($event)"></br-book>
