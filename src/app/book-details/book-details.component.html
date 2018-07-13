@@ -1,3 +1,13 @@
-<p>
-  book-details works!
-</p>
+<ng-container *ngIf="book$ | async as book">
+
+  <h2>
+    Book #{{ book.title }}
+  </h2>
+  <p>
+    {{ book.description }}
+  </p>
+</ng-container>
+
+<a [routerLink]="['dashboard']">dashboard</a>
+<hr>
+<a routerLink="/book/222">Gehe zu Buch 222</a>
